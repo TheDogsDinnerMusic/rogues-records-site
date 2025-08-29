@@ -49,6 +49,8 @@
       "title": "Biker Bar Rock",
       "series": "RR-003",
       "tracks": [
+      "cover": "assets/artwork/biker-bar-rock.jpg",
+
         {
           "title": "Kickstand",
           "duration": "2:21",
