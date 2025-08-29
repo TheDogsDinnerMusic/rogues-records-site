@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rogues Records — Library</title>
-  <meta name="description" content="Rogues Records — minimal library: drop folders, it auto-updates.">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Rogues Records — listen to previews." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="header">
@@ -24,29 +24,25 @@
     <section class="hero">
       <div class="hero-eyebrow">Premium Production Music</div>
       <h1 class="hero-title">Dark Horse. Rogue Energy.</h1>
-      <p class="hero-copy">Auto-indexed from this repo. Drop audio & covers — no data files, no edits.</p>
+      <p class="hero-copy">A simple library — covers and play buttons. No fuss.</p>
     </section>
 
     <section id="library" class="library">
       <div id="albumsGrid" class="grid"></div>
-      <div id="emptyState" style="display:none;color:#9ca3af">No albums found in <code>assets/audio/</code>.</div>
+      <div id="emptyState" style="display:none;color:#9ca3af">No albums found. Is <code>data.json</code> present?</div>
     </section>
 
     <section id="about" class="about">
       <h2>About</h2>
-      <p>Rogues Records crafts high‑impact production music for trailers, promos, sport, and premium brands.</p>
+      <p>Rogues Records crafts high-impact production music for trailers, promos, sport, and premium brands.</p>
     </section>
 
     <section id="contact" class="contact">
       <h2>Contact</h2>
-      <p>Email: <a id="contactEmail" href="mailto:">—</a><br>Phone: <a id="contactPhone" href="tel:">—</a></p>
+      <p>Email: <a href="mailto:">—</a><br/>Phone: <a href="tel:">—</a></p>
       <p class="small">Australasia licensing via 101.audio. Worldwide enquiries: contact Rogues Records.</p>
     </section>
   </main>
-
-  <footer class="footer">
-    <span>© <span id="year"></span> Rogues Records</span>
-  </footer>
 
   <div id="player" class="player hidden">
     <button id="playPause" aria-label="Play/Pause" class="btn icon">►</button>
@@ -57,6 +53,10 @@
     </div>
     <button id="closePlayer" class="btn text">Close</button>
   </div>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Rogues Records</span>
+  </footer>
 
   <script src="script.js"></script>
 </body>
