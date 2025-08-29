@@ -1,92 +1,315 @@
 {
   "albums": [
     {
-      "id": "luxury-corporatica",
-      "title": "Luxury Corporatica",
-      "series": "RR-001",
+      "id": "biker-bar",
+      "title": "Biker Bar",
+      "series": "",
+      "cover": "",
       "tracks": [
         {
-          "title": "The Penthouse",
-          "duration": "2:31",
-          "preview": "assets/audio/The Penthouse (Main).mp3"
+          "title": "Horns Up",
+          "duration": "",
+          "preview": "assets/audio/biker-bar/Horns Up (Main).mp3"
         },
         {
-          "title": "Red Carpet",
-          "duration": "2:04",
-          "preview": "assets/audio/sample.wav"
+          "title": "Johnny, Jack & Jim",
+          "duration": "",
+          "preview": "assets/audio/biker-bar/Johnny, Jack & Jim (Main).mp3"
         },
         {
-          "title": "Boardroom Drive",
-          "duration": "2:48",
-          "preview": "assets/audio/sample.wav"
+          "title": "Pistons On Fire",
+          "duration": "",
+          "preview": "assets/audio/biker-bar/Pistons On Fire (Main).mp3"
+        },
+        {
+          "title": "RPMBikerBarRockTrqk.io",
+          "duration": "",
+          "preview": "assets/audio/biker-bar/RPMBikerBarRockTrqk.io.mp3"
+        },
+        {
+          "title": "The Desert Gets Wilder",
+          "duration": "",
+          "preview": "assets/audio/biker-bar/The Desert Gets Wilder (Main).mp3"
+        },
+        {
+          "title": "The Highway",
+          "duration": "",
+          "preview": "assets/audio/biker-bar/The Highway (Main).mp3"
+        },
+        {
+          "title": "Tumbleweed",
+          "duration": "",
+          "preview": "assets/audio/biker-bar/Tumbleweed (Main).mp3"
+        },
+        {
+          "title": "Who Needs Brakes",
+          "duration": "",
+          "preview": "assets/audio/biker-bar/Who Needs Brakes (Main).mp3"
+        }
+      ]
+    },
+    {
+      "id": "cinematic-trap-rock-promos-trailers",
+      "title": "Cinematic Trap Rock Promos & Trailers",
+      "series": "",
+      "cover": "",
+      "tracks": [
+        {
+          "title": "Echelon",
+          "duration": "",
+          "preview": "assets/audio/cinematic-trap-rock-promos-trailers/Echelon (Main).mp3"
+        },
+        {
+          "title": "End Game",
+          "duration": "",
+          "preview": "assets/audio/cinematic-trap-rock-promos-trailers/End Game (Main).mp3"
+        },
+        {
+          "title": "Fall Out",
+          "duration": "",
+          "preview": "assets/audio/cinematic-trap-rock-promos-trailers/Fall Out (Main).mp3"
+        },
+        {
+          "title": "Fight Zone",
+          "duration": "",
+          "preview": "assets/audio/cinematic-trap-rock-promos-trailers/Fight Zone (Main).mp3"
+        },
+        {
+          "title": "Prize Time",
+          "duration": "",
+          "preview": "assets/audio/cinematic-trap-rock-promos-trailers/Prize Time (Main).mp3"
+        },
+        {
+          "title": "RPMCinematicTrapRockTrqk.io",
+          "duration": "",
+          "preview": "assets/audio/cinematic-trap-rock-promos-trailers/RPMCinematicTrapRockTrqk.io.mp3"
+        },
+        {
+          "title": "Take It",
+          "duration": "",
+          "preview": "assets/audio/cinematic-trap-rock-promos-trailers/Take It (Main).mp3"
+        },
+        {
+          "title": "To The Edge",
+          "duration": "",
+          "preview": "assets/audio/cinematic-trap-rock-promos-trailers/To The Edge (Main).mp3"
         }
       ]
     },
     {
       "id": "indie-garage",
       "title": "Indie Garage",
-      "series": "RR-002",
+      "series": "",
+      "cover": "",
       "tracks": [
         {
           "title": "All The Hoodies",
-          "duration": "2:15",
-          "preview": "assets/audio/sample.wav"
+          "duration": "",
+          "preview": "assets/audio/indie-garage/All The Hoodies (Main).mp3"
         },
         {
-          "title": "Wild In The Evening",
-          "duration": "2:36",
-          "preview": "assets/audio/sample.wav"
+          "title": "Alliance",
+          "duration": "",
+          "preview": "assets/audio/indie-garage/Alliance (Main).mp3"
         },
         {
           "title": "Blame It On",
-          "duration": "2:09",
-          "preview": "assets/audio/sample.wav"
+          "duration": "",
+          "preview": "assets/audio/indie-garage/Blame It On (Main).mp3"
+        },
+        {
+          "title": "Come Get It",
+          "duration": "",
+          "preview": "assets/audio/indie-garage/Come Get It (Main).mp3"
+        },
+        {
+          "title": "Incoming",
+          "duration": "",
+          "preview": "assets/audio/indie-garage/Incoming (Main).mp3"
+        },
+        {
+          "title": "Midnight Star",
+          "duration": "",
+          "preview": "assets/audio/indie-garage/Midnight Star (Main).mp3"
+        },
+        {
+          "title": "Save It For Later",
+          "duration": "",
+          "preview": "assets/audio/indie-garage/Save It For Later (Main).mp3"
+        },
+        {
+          "title": "Sleight Of Hand",
+          "duration": "",
+          "preview": "assets/audio/indie-garage/Sleight Of Hand (Main).mp3"
+        },
+        {
+          "title": "Too Fancy",
+          "duration": "",
+          "preview": "assets/audio/indie-garage/Too Fancy (Main).mp3"
+        },
+        {
+          "title": "Wild In The Evening",
+          "duration": "",
+          "preview": "assets/audio/indie-garage/Wild In The Evening (Main).mp3"
         }
       ]
     },
     {
-      "id": "biker-bar-rock",
-      "title": "Biker Bar Rock",
-      "series": "RR-003",
+      "id": "inspirational-indie-promos-trailers",
+      "title": "Inspirational Indie Promos & Trailers",
+      "series": "",
+      "cover": "",
       "tracks": [
-      "cover": "assets/artwork/biker-bar-rock.jpg",
-
         {
-          "title": "Kickstand",
-          "duration": "2:21",
-          "preview": "assets/audio/sample.wav"
+          "title": "Calling Lights Ahead",
+          "duration": "",
+          "preview": "assets/audio/inspirational-indie-promos-trailers/Calling Lights Ahead (Main).mp3"
         },
         {
-          "title": "Chrome & Leather",
-          "duration": "2:44",
-          "preview": "assets/audio/sample.wav"
+          "title": "Courage Within",
+          "duration": "",
+          "preview": "assets/audio/inspirational-indie-promos-trailers/Courage Within (Main).mp3"
         },
         {
-          "title": "Roadhouse",
-          "duration": "2:17",
-          "preview": "assets/audio/sample.wav"
+          "title": "From Above",
+          "duration": "",
+          "preview": "assets/audio/inspirational-indie-promos-trailers/From Above (Main).mp3"
+        },
+        {
+          "title": "RPMInspirationalIndiePromos&TrailersTrqk.io",
+          "duration": "",
+          "preview": "assets/audio/inspirational-indie-promos-trailers/RPMInspirationalIndiePromos&TrailersTrqk.io.mp3"
+        },
+        {
+          "title": "Shining Through",
+          "duration": "",
+          "preview": "assets/audio/inspirational-indie-promos-trailers/Shining Through (Main).mp3"
+        },
+        {
+          "title": "Sunsets In Blue",
+          "duration": "",
+          "preview": "assets/audio/inspirational-indie-promos-trailers/Sunsets In Blue (Main).mp3"
+        },
+        {
+          "title": "The Bluest Skies",
+          "duration": "",
+          "preview": "assets/audio/inspirational-indie-promos-trailers/The Bluest Skies (Main).mp3"
+        },
+        {
+          "title": "Time To Fly",
+          "duration": "",
+          "preview": "assets/audio/inspirational-indie-promos-trailers/Time To Fly (Main).mp3"
+        },
+        {
+          "title": "Victory Abound",
+          "duration": "",
+          "preview": "assets/audio/inspirational-indie-promos-trailers/Victory Abound (Main).mp3"
         }
       ]
     },
     {
-      "id": "cinematic-trap-rock",
-      "title": "Cinematic Trap Rock Promos & Trailers",
-      "series": "RR-004",
+      "id": "luxury-corporatica",
+      "title": "Luxury Corporatica",
+      "series": "",
+      "cover": "assets/artwork/luxury-corporatica.jpg",
       "tracks": [
         {
-          "title": "Voltage",
-          "duration": "2:22",
-          "preview": "assets/audio/sample.wav"
+          "title": "Diamond",
+          "duration": "",
+          "preview": "assets/audio/luxury-corporatica/Diamond (Main).mp3"
         },
         {
-          "title": "Cathedral",
-          "duration": "2:40",
-          "preview": "assets/audio/sample.wav"
+          "title": "Elite",
+          "duration": "",
+          "preview": "assets/audio/luxury-corporatica/Elite (Main).mp3"
         },
         {
-          "title": "Switchblade",
-          "duration": "2:28",
-          "preview": "assets/audio/sample.wav"
+          "title": "Lemon & Lime",
+          "duration": "",
+          "preview": "assets/audio/luxury-corporatica/Lemon & Lime (Main).mp3"
+        },
+        {
+          "title": "Low Key At The Top",
+          "duration": "",
+          "preview": "assets/audio/luxury-corporatica/Low Key At The Top (Main).mp3"
+        },
+        {
+          "title": "Protoge",
+          "duration": "",
+          "preview": "assets/audio/luxury-corporatica/Protoge (Main).mp3"
+        },
+        {
+          "title": "Red Carpet",
+          "duration": "",
+          "preview": "assets/audio/luxury-corporatica/Red Carpet (Main).mp3"
+        },
+        {
+          "title": "RPMLuxuryCorporaticaTrqk.io",
+          "duration": "",
+          "preview": "assets/audio/luxury-corporatica/RPMLuxuryCorporaticaTrqk.io.mp3"
+        },
+        {
+          "title": "The Penthouse",
+          "duration": "",
+          "preview": "assets/audio/luxury-corporatica/The Penthouse (Main).mp3"
+        },
+        {
+          "title": "Wine Red",
+          "duration": "",
+          "preview": "assets/audio/luxury-corporatica/Wine Red (Main).mp3"
+        }
+      ]
+    },
+    {
+      "id": "stadium-sports-rock",
+      "title": "Stadium Sports Rock",
+      "series": "",
+      "cover": "assets/artwork/stadium-sports-rock.jpg",
+      "tracks": [
+        {
+          "title": "Blood Nose",
+          "duration": "",
+          "preview": "assets/audio/stadium-sports-rock/Blood Nose (Main).mp3"
+        },
+        {
+          "title": "Call Time Out",
+          "duration": "",
+          "preview": "assets/audio/stadium-sports-rock/Call Time Out (Main).mp3"
+        },
+        {
+          "title": "Fall On The Sword",
+          "duration": "",
+          "preview": "assets/audio/stadium-sports-rock/Fall On The Sword (Main).mp3"
+        },
+        {
+          "title": "Gasoline",
+          "duration": "",
+          "preview": "assets/audio/stadium-sports-rock/Gasoline (Main).mp3"
+        },
+        {
+          "title": "Light It Up",
+          "duration": "",
+          "preview": "assets/audio/stadium-sports-rock/Light It Up (Main).mp3"
+        },
+        {
+          "title": "Race To The Top",
+          "duration": "",
+          "preview": "assets/audio/stadium-sports-rock/Race To The Top (Main).mp3"
+        },
+        {
+          "title": "Run For Your Life",
+          "duration": "",
+          "preview": "assets/audio/stadium-sports-rock/Run For Your Life (Main).mp3"
+        },
+        {
+          "title": "The Alliance",
+          "duration": "",
+          "preview": "assets/audio/stadium-sports-rock/The Alliance (Main).mp3"
+        },
+        {
+          "title": "To Fight To The End",
+          "duration": "",
+          "preview": "assets/audio/stadium-sports-rock/To Fight To The End (Main).mp3"
         }
       ]
     }
