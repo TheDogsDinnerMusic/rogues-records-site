@@ -20,17 +20,11 @@ function cardHtml(album) {
     </div>
     <div class="card-body">
       <ul class="tracks">
-        ${album.tracks
-          .map(
-            (t) => `
+        ${album.tracks.map(t => `
           <li class="track">
-            <button class="play" data-src="${t.preview || ''}" data-title="${album.title || ''} — ${t.title || ''}" ${
-              t.preview ? '' : 'disabled'
-            }>►</button>
+            <button class="play" data-src="${t.preview || ''}" data-title="${album.title || ''} — ${t.title || ''}" ${t.preview ? '' : 'disabled'}>►</button>
             <div class="track-title" title="${t.title || ''}">${t.title || ''}</div>
-          </li>`
-          )
-          .join('')}
+          </li>`).join('')}
       </ul>
     </div>
   </article>`;
@@ -42,7 +36,7 @@ function render(albums) {
     return;
   }
   grid.innerHTML = albums.map(cardHtml).join('');
-  grid.querySelectorAll('.play').forEach((btn) => {
+  grid.querySelectorAll('.play').forEach(btn => {
     btn.addEventListener('click', () => {
       const src = btn.getAttribute('data-src');
       const title = btn.getAttribute('data-title');
@@ -59,7 +53,7 @@ function playTrack(title, src) {
   audio.play().then(() => {
     player.classList.remove('hidden');
     playPauseBtn.textContent = '❚❚';
-  }).catch((e) => {
+  }).catch(e => {
     console.error(e);
     alert('Playback failed for ' + src);
   });
@@ -77,10 +71,7 @@ function stop() {
 playPauseBtn.addEventListener('click', () => {
   if (!currentTrack) return;
   if (audio.paused) audio.play().then(() => (playPauseBtn.textContent = '❚❚'));
-  else {
-    audio.pause();
-    playPauseBtn.textContent = '►';
-  }
+  else { audio.pause(); playPauseBtn.textContent = '►'; }
 });
 closePlayerBtn.addEventListener('click', stop);
 audio.addEventListener('timeupdate', () => {
@@ -90,7 +81,7 @@ audio.addEventListener('timeupdate', () => {
 audio.addEventListener('ended', stop);
 
 (async function boot() {
-  $('#year').textContent = new Date().getFullYear();
+  document.querySelector('#year').textContent = new Date().getFullYear();
   try {
     const res = await fetch('data.json', { cache: 'no-store' });
     const data = await res.json();
