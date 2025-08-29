@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rogues Records — Bulk Loader</title>
+<style>
+  body{font-family:system-ui,-apple-system,Segoe UI,Inter,Arial,sans-serif;background:#0b0b0b;color:#e5e7eb;margin:0;padding:24px}
+  h1{color:#dddcd4} .muted{color:#9ca3af}
+  .card{background:#111215;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px;margin:12px 0}
+  textarea{width:100%;height:160px;background:#0c0c0c;border:1px solid rgba(255,255,255,.12);color:#dddcd4;border-radius:10px;padding:10px}
+  input[type=file]{margin:8px 0}
+  button{background:#0c0c0c;color:#dddcd4;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:10px 14px;cursor:pointer}
+  pre{white-space:pre-wrap;word-wrap:break-word;background:#0c0c0c;border:1px solid rgba(255,255,255,.12);padding:12px;border-radius:10px}
+  code{color:#dddcd4}
+  .ok{color:#22c55e}.warn{color:#f59e0b}.err{color:#ef4444}
+</style>
+</head>
+<body>
+<h1>Rogues Records — Bulk Loader</h1>
+<p class="muted">Paste CSV below or choose a CSV file. Then click <b>Generate JSON</b> and copy the result into <code>data.json</code> in your repo.</p>
+<div class="card">
+  <b>CSV columns (header row required):</b>
+  <pre>album_id,album_title,series,track_title,duration,preview_filename,cover (optional path e.g. assets/artwork/album.jpg)</pre>
+  <b>Tips:</b>
+  <ul>
+    <li>Upload all MP3 previews to <code>assets/audio/</code>. Use the exact filenames in <code>preview_filename</code>.</li>
+    <li>Upload all covers to <code>assets/artwork/</code>. Put the path in <code>cover</code> (jpg/png/svg). If empty, the site will fall back to a gradient.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <input type="file" id="file" accept=".csv">
+  <div>or paste CSV:</div>
+  <textarea id="csv" placeholder="album_id,album_title,series,track_title,duration,preview_filename,cover"></textarea>
+  <button id="go">Generate JSON</button>
+</div>
+
+<div class="card">
+  <b>Output <code>data.json</code></b>
+  <pre id="out"></pre>
+  <button id="dl">Download data.json</button>
+</div>
+
+<script>
+function parseCSV(text){
+  const lines = text.split(/\r?\n/).filter(l=>l.trim().length>0);
+  if(lines.length<2) throw new Error('CSV must include a header and at least 1 row.');
+  const headers = lines[0].split(',').map(h=>h.trim());
+  const idx = (h)=>headers.indexOf(h);
+  const need = ['album_id','album_title','series','track_title','duration','preview_filename'];
+  for (const n of need){ if (idx(n)===-1) throw new Error('Missing column: '+n); }
+  const coverIdx = idx('cover');
+  const rows = lines.slice(1).map(l=>{
+    const cells = l.split(','); // simple parse; avoid commas inside values
+    function cell(name){ const i=idx(name); return i>=0 ? (cells[i]||'').trim() : ''; }
+    return {
+      album_id: cell('album_id'),
+      album_title: cell('album_title'),
+      series: cell('series'),
+      track_title: cell('track_title'),
+      duration: cell('duration'),
+      preview_filename: cell('preview_filename'),
+      cover: coverIdx>=0 ? (cells[coverIdx]||'').trim() : ''
+    };
+  });
+  return rows;
+}
+
+function buildJSON(rows){
+  const albumsMap = {};
+  for (const r of rows){
+    if(!albumsMap[r.album_id]){
+      albumsMap[r.album_id] = { id:r.album_id, title:r.album_title, series:r.series, cover:r.cover, tracks:[] };
+    }
+    albumsMap[r.album_id].tracks.push({
+      title: r.track_title,
+      duration: r.duration,
+      preview: 'assets/audio/' + r.preview_filename
+    });
+  }
+  const albums = Object.values(albumsMap);
+  return JSON.stringify({albums}, null, 2);
+}
+
+document.getElementById('file').addEventListener('change', async (e)=>{
+  const f = e.target.files[0]; if(!f) return;
+  const txt = await f.text();
+  document.getElementById('csv').value = txt;
+});
+
+document.getElementById('go').addEventListener('click', ()=>{
+  try{
+    const csv = document.getElementById('csv').value;
+    const rows = parseCSV(csv);
+    const json = buildJSON(rows);
+    document.getElementById('out').textContent = json;
+    window._lastJSON = json;
+  }catch(err){
+    document.getElementById('out').textContent = 'Error: ' + err.message;
+  }
+});
+
+document.getElementById('dl').addEventListener('click', ()=>{
+  const blob = new Blob([window._lastJSON || ''], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'data.json';
+  a.click();
+});
+</script>
+</body>
+</html>
