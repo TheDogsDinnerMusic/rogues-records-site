@@ -83,9 +83,19 @@ audio.addEventListener('ended', stop);
 (async function boot() {
   document.querySelector('#year').textContent = new Date().getFullYear();
   try {
-    const res = await fetch('data.json', { cache: 'no-store' });
-    const data = await res.json();
-    render(data.albums || []);
+const res = await fetch('data.json', { cache: 'no-store' });
+const data = await res.json();
+
+// drop tracks whose title or file path contains "trqk"
+const albums = (data.albums || []).map(a => ({
+  ...a,
+  tracks: (a.tracks || []).filter(t =>
+    !/trqk/i.test(t.title || '') && !/trqk/i.test(t.preview || '')
+  )
+}));
+
+render(albums);
+
   } catch (e) {
     console.error(e);
     emptyState.style.display = 'block';
