@@ -1,0 +1,92 @@
+{
+  "albums": [
+    {
+      "id": "luxury-corporatica",
+      "title": "Luxury Corporatica",
+      "series": "RR-001",
+      "tracks": [
+        {
+          "title": "The Penthouse",
+          "duration": "2:31",
+          "preview": "assets/audio/sample.wav"
+        },
+        {
+          "title": "Red Carpet",
+          "duration": "2:04",
+          "preview": "assets/audio/sample.wav"
+        },
+        {
+          "title": "Boardroom Drive",
+          "duration": "2:48",
+          "preview": "assets/audio/sample.wav"
+        }
+      ]
+    },
+    {
+      "id": "indie-garage",
+      "title": "Indie Garage",
+      "series": "RR-002",
+      "tracks": [
+        {
+          "title": "All The Hoodies",
+          "duration": "2:15",
+          "preview": "assets/audio/sample.wav"
+        },
+        {
+          "title": "Wild In The Evening",
+          "duration": "2:36",
+          "preview": "assets/audio/sample.wav"
+        },
+        {
+          "title": "Blame It On",
+          "duration": "2:09",
+          "preview": "assets/audio/sample.wav"
+        }
+      ]
+    },
+    {
+      "id": "biker-bar-rock",
+      "title": "Biker Bar Rock",
+      "series": "RR-003",
+      "tracks": [
+        {
+          "title": "Kickstand",
+          "duration": "2:21",
+          "preview": "assets/audio/sample.wav"
+        },
+        {
+          "title": "Chrome & Leather",
+          "duration": "2:44",
+          "preview": "assets/audio/sample.wav"
+        },
+        {
+          "title": "Roadhouse",
+          "duration": "2:17",
+          "preview": "assets/audio/sample.wav"
+        }
+      ]
+    },
+    {
+      "id": "cinematic-trap-rock",
+      "title": "Cinematic Trap Rock Promos & Trailers",
+      "series": "RR-004",
+      "tracks": [
+        {
+          "title": "Voltage",
+          "duration": "2:22",
+          "preview": "assets/audio/sample.wav"
+        },
+        {
+          "title": "Cathedral",
+          "duration": "2:40",
+          "preview": "assets/audio/sample.wav"
+        },
+        {
+          "title": "Switchblade",
+          "duration": "2:28",
+          "preview": "assets/audio/sample.wav"
+        }
+      ]
+    }
+  ]
+}
