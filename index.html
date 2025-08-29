@@ -1,10 +1,10 @@
- <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rogues Records — Library</title>
-  <meta name="description" content="Rogues Records — premium production music. Minimal, elegant, rogue.">
+  <meta name="description" content="Rogues Records — minimal library: drop folders, it auto-updates.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,16 +24,17 @@
     <section class="hero">
       <div class="hero-eyebrow">Premium Production Music</div>
       <h1 class="hero-title">Dark Horse. Rogue Energy.</h1>
-      <p class="hero-copy">Clean licensing and global previews — minimal, elegant, fast.</p>
+      <p class="hero-copy">Auto-indexed from this repo. Drop audio & covers — no data files, no edits.</p>
     </section>
 
     <section id="library" class="library">
       <div id="albumsGrid" class="grid"></div>
+      <div id="emptyState" style="display:none;color:#9ca3af">No albums found in <code>assets/audio/</code>.</div>
     </section>
 
     <section id="about" class="about">
       <h2>About</h2>
-      <p>Rogues Records crafts high‑impact production music for trailers, promos, sport, and premium brands. Built for editors, producers, and marketers who value speed and taste.</p>
+      <p>Rogues Records crafts high‑impact production music for trailers, promos, sport, and premium brands.</p>
     </section>
 
     <section id="contact" class="contact">
@@ -45,19 +46,14 @@
 
   <footer class="footer">
     <span>© <span id="year"></span> Rogues Records</span>
-    <span>•</span>
-    <span>Minimal. Elegant. Rogue.</span>
   </footer>
 
-  <!-- Sticky player -->
   <div id="player" class="player hidden">
     <button id="playPause" aria-label="Play/Pause" class="btn icon">►</button>
     <div class="track-meta">
       <div class="now-playing">Now Playing</div>
       <div id="trackTitle" class="track-title">—</div>
-      <div class="progress">
-        <div id="progressBar" class="progress-bar"></div>
-      </div>
+      <div class="progress"><div id="progressBar" class="progress-bar"></div></div>
     </div>
     <button id="closePlayer" class="btn text">Close</button>
   </div>
